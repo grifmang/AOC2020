@@ -9,5 +9,6 @@ sums = []
 
 for index, num in enumerate(result):
     for ind, nums in enumerate(result[index+1:]):
-            if num + nums == 2020:
-                print(nums*num)
+        for i, n in enumerate(result[ind+1:]):
+            if num + nums + n == 2020:
+                print(nums*num*n)
