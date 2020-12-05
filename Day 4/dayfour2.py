@@ -36,44 +36,36 @@ def clean_data():
 def check_valid_values(passports):
     count = 0
     for val in passports.values():
-        temp_array = []
         temp_count = 0
         for l in val:
             if l[0] == 'byr':
                 if byr(l):
                     temp_count += 1
-                    temp_array.append(l)
                 else: break
             elif l[0] == 'cid': continue
             elif l[0] == 'iyr':
                 if iyr(l):
                     temp_count += 1
-                    temp_array.append(l)
                 else: break
             elif l[0] == 'eyr':
                 if eyr(l):
                     temp_count += 1
-                    temp_array.append(l)
                 else: break
             elif l[0] == 'hgt':
                 if hgt(l):
                     temp_count += 1
-                    temp_array.append(l)
                 else: break
             elif l[0] == 'hcl':
                 if hcl(l):
                     temp_count += 1
-                    temp_array.append(l)
                 else: break
             elif l[0] == 'ecl':
                 if ecl(l):
                     temp_count += 1
-                    temp_array.append(l)
                 else: break
             elif l[0] == 'pid':
                 if pid(l):
                     temp_count += 1
-                    temp_array.append(l)
                 else: break
             
             if temp_count >= 7:
